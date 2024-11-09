@@ -71,5 +71,14 @@ namespace HousePets_Airbnb
             ErrorLabel.Visible = false;
         }
 
+        private void MinButton_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void ExitButton_Click(Object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
