@@ -9,6 +9,7 @@ namespace HousePets_Airbnb
             InitializeComponent();
             ErrorLabel.Visible = false;
             Accounts.addAccount("admin", "pass");
+            panel2.BringToFront();
         }
 
         // Importing user32.dll for drag function
@@ -18,7 +19,6 @@ namespace HousePets_Airbnb
         [DllImport("user32.dll")]
         public static extern int SendMessage(IntPtr hWnd, int wMsg, int wParam, int lParam);
 
-        //drags the form when held
         private void FrontPageForm_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -47,10 +47,12 @@ namespace HousePets_Airbnb
                 ErrorLabel.ForeColor = Color.Green;
                 ErrorLabel.Text = "Signed-Up Successfully";
                 ErrorLabel.Visible = true;
+                UserTextBox.Clear();
+                PassTextBox.Clear();
             }
         }
 
-        private void LogInButton_Click_1(object sender, EventArgs e)
+        private async void LogInButton_Click_1(object sender, EventArgs e)
         {
             if (!Accounts.verify(UserTextBox.Text, PassTextBox.Text))
             {
@@ -63,6 +65,15 @@ namespace HousePets_Airbnb
                 ErrorLabel.ForeColor = Color.Green;
                 ErrorLabel.Text = "Logged-In Successfully";
                 ErrorLabel.Visible = true;
+                panel1.BringToFront();
+                await Task.Delay(2000);
+                HomeForm homeForm = new HomeForm(this);
+                panel2.BringToFront();
+                UserTextBox.Clear();
+                PassTextBox.Clear();
+                ErrorLabel.Visible = false;
+                Hide();
+                homeForm.ShowDialog();
             }
         }
 
