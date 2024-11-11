@@ -69,6 +69,7 @@
             ExitButton.BackColor = Color.Transparent;
             ExitButton.BackgroundImage = (Image)resources.GetObject("ExitButton.BackgroundImage");
             ExitButton.BackgroundImageLayout = ImageLayout.Zoom;
+            ExitButton.Cursor = Cursors.Hand;
             ExitButton.FlatAppearance.BorderSize = 0;
             ExitButton.FlatStyle = FlatStyle.Flat;
             ExitButton.ForeColor = Color.Black;
@@ -97,6 +98,7 @@
             MinButton.BackColor = Color.Transparent;
             MinButton.BackgroundImage = (Image)resources.GetObject("MinButton.BackgroundImage");
             MinButton.BackgroundImageLayout = ImageLayout.Zoom;
+            MinButton.Cursor = Cursors.Hand;
             MinButton.FlatAppearance.BorderSize = 0;
             MinButton.FlatStyle = FlatStyle.Flat;
             MinButton.ForeColor = Color.Black;
@@ -161,6 +163,7 @@
             // 
             LogInButton.Anchor = AnchorStyles.Left;
             LogInButton.BackColor = Color.SteelBlue;
+            LogInButton.Cursor = Cursors.Hand;
             LogInButton.FlatStyle = FlatStyle.Popup;
             LogInButton.Font = new Font("Segoe UI", 15F);
             LogInButton.ForeColor = Color.White;
@@ -176,6 +179,7 @@
             // 
             SignUpButton.Anchor = AnchorStyles.Left;
             SignUpButton.BackColor = Color.ForestGreen;
+            SignUpButton.Cursor = Cursors.Hand;
             SignUpButton.FlatStyle = FlatStyle.Popup;
             SignUpButton.Font = new Font("Segoe UI", 15F);
             SignUpButton.ForeColor = Color.White;
