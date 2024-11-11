@@ -68,12 +68,13 @@ namespace HousePets_Airbnb
                 panel1.BringToFront();
                 await Task.Delay(2000);
                 HomeForm homeForm = new HomeForm(this);
+                EULAForm eula = new EULAForm(homeForm);
                 panel2.BringToFront();
                 UserTextBox.Clear();
                 PassTextBox.Clear();
                 ErrorLabel.Visible = false;
                 Hide();
-                homeForm.ShowDialog();
+                eula.ShowDialog();
             }
         }
 

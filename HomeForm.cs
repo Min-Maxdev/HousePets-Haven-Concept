@@ -9,7 +9,6 @@ namespace HousePets_Airbnb
         {
             InitializeComponent();
             frontPage = form;
-
         }
 
         [DllImport("user32.dll")]
@@ -46,30 +45,27 @@ namespace HousePets_Airbnb
         private void BrowseButton_Click(object sender, EventArgs e)
         {
             SidePanel.Location = new Point(0,BrowseButton.Location.Y);
+            browseControl1.BringToFront();
         }
 
-        private void FavoritesButton_Click(object sender, EventArgs e)
-        {
-            SidePanel.Location = new Point(0, FavoritesButton.Location.Y);
-        }
-
+    
         private void ChatButton_Click(object sender, EventArgs e)
         {
             SidePanel.Location = new Point(0, ChatButton.Location.Y);
         }
 
-        //Pet Sit
-        private void PetSitButton_Click(object sender, EventArgs e)
+        //Host
+        private void HostButton_Click(object sender, EventArgs e)
         {
-            SidePanel.Location = new Point(0, PetSitButton.Location.Y);
-        }
-
-        private void createPetSit()
-        {
-            
+            SidePanel.Location = new Point(0, HostButton.Location.Y);
+            hostControl1.BringToFront();
         }
 
         //Favorites
+        private void FavoritesButton_Click(object sender, EventArgs e)
+        {
+            SidePanel.Location = new Point(0, FavoritesButton.Location.Y);
+        }
 
     }
 }
